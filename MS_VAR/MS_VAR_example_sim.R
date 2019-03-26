@@ -22,8 +22,9 @@ n_reg=2
 reg_m=TRUE
 reg_s=TRUE
 
-stanfit = sampling(sm,data=list(T=n,dim=n_dim,y=Y,ARdim=n_AR,nreg=n_reg,mean_reg=reg_m,sigma_reg=reg_s,Q_alpha=as.array(rep(1,n_reg)),eye=diag(n_dim),
-                   L=chol(diag(n_dim)),nu=n_dim+1),iter=(it_burnin+it_sample), warmup = it_burnin, chains=chains,
+stanfit = sampling(sm,data=list(T=n,dim=n_dim,y=Y,ARdim=n_AR,nreg=n_reg,mean_reg=reg_m,sigma_reg=reg_s,Q_alpha=as.array(rep(1,n_reg)),
+                   mu_mean=0,mu_sd=0.2,phi_mean=0,phi_sd=1,eye=diag(n_dim),L=chol(diag(n_dim)),nu=n_dim+1),
+                   iter=(it_burnin+it_sample), warmup = it_burnin, chains=chains,
                    pars=c("Q","mu","phi","sigma","S"))
 
 # stanfit = sampling(sm,data=list(T=n,dim=n_dim,y=Y,ARdim=n_AR,nreg=n_reg,mean_reg=reg_m,sigma_reg=reg_s,Q_alpha=as.array(rep(1,n_reg)),
