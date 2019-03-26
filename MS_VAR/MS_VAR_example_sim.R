@@ -2,7 +2,7 @@ library(coda)
 library(rstan)
 options(mc.cores = parallel::detectCores())
 
-chains=3
+chains=8
 it_burnin = 500
 it_sample = 1000
 
