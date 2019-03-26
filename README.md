@@ -10,4 +10,4 @@ The code fits a Markov-switching vector autoregressive model to data input. The 
 
 See the wiki for detailed instructions.
 
-The code assumes that the R-packages rstan, coda and MASS are installed.
+The code assumes that the R-packages rstan and coda are installed.
