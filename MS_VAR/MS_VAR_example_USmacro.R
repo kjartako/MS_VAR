@@ -28,7 +28,8 @@ stanfit = sampling(sm,data=list(T=n,dim=n_dim,y=Y,ARdim=n_AR,nreg=n_reg,mean_reg
                    pars=c("Q","mu","phi","sigma","S"))
 
 # stanfit = sampling(sm,data=list(T=n,dim=n_dim,y=Y,ARdim=n_AR,nreg=n_reg,mean_reg=reg_m,sigma_reg=reg_s,Q_alpha=as.array(rep(1,n_reg)),
-#                    eta=1,gamma_alpha=2,gamma_beta=0.1),iter=(it_burnin+it_sample), warmup = it_burnin, chains=chains,
+#                    mu_mean=0,mu_sd=0.2,phi_mean=0,phi_sd=1,eta=1,gamma_alpha=2,gamma_beta=0.1),
+#                    iter=(it_burnin+it_sample), warmup = it_burnin, chains=chains,
 #                    pars=c("Q","mu","phi","sigma","S"))
 
 ######################################################################################
