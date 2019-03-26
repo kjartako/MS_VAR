@@ -7,6 +7,10 @@ int<lower=1> nreg; // Number of regimes
 int<lower = 0, upper = 1> mean_reg;
 int<lower = 0, upper = 1> sigma_reg;
 vector[nreg] Q_alpha; // Transition probabilities hyperparameter
+real mu_mean; // Mean value of the normal prior for the constant means
+real mu_sd; // Standard deviation of the normal prior for the constant means
+real phi_mean; // Mean value of the normal prior for the autoregressive coefficients
+real phi_sd; // Standard deviation of the normal prior for the autoregressive coefficients
 real eta; // LKJ hyperparameter
 real gamma_alpha; // Inverse gamma hyperparameter (shape)
 real gamma_beta;  // Inverse gamma hyperparameter (scale)
@@ -41,8 +45,8 @@ for (k in 1:nreg){
 }
 
 for (k in 1:(mean_reg ? nreg : 1)){
-	mu[k] ~ normal(0,0.2);
-	to_vector(phi[k]) ~ normal(0,1);	
+	mu[k] ~ normal(mu_mean,mu_sd);
+	to_vector(phi[k]) ~ normal(phi_mean,phi_sd);	
 }
 
 for (k in 1:(sigma_reg ? nreg : 1)){
