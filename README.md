@@ -8,6 +8,6 @@ by Kjartan Kloster Osmundsen, Tore Selland Kleppe & Atle Oglend.
 
 The code fits a Markov-switching vector autoregressive model to data input. The user can specify the data, number of regimes and number of autoregressive terms. The regimes can be applied to the mean structure and/or the covariance structure.
 
-See the wiki for detailed instructions. See also this [blog post](https://www.kjartako.no/post/stan-code-for-markov-switching-vector-autoregressive-models/).
+See the [wiki](https://github.com/kjartako/MS_VAR/wiki) for detailed instructions. See also this [blog post](https://www.kjartako.no/post/stan-code-for-markov-switching-vector-autoregressive-models/).
 
 The code assumes that the R-packages rstan and coda are installed (and rstudioapi if you are using Rstudio).
