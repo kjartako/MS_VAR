@@ -6,7 +6,9 @@ The repository contains code used in the following paper:
 
 by Kjartan Kloster Osmundsen, Tore Selland Kleppe & Atle Oglend.
 
-The code fits a Markov-switching vector autoregressive model to data input. The user can specify the data, number of regimes and number of autoregressive terms. The regimes can be applied to the mean structure and/or the covariance structure.
+The code fits a Markov-switching vector autoregressive model (MS-VAR) to data input. The user can specify the data, number of regimes and number of autoregressive terms. The regimes can be applied to the mean structure and/or the covariance structure.
+
+The code for a two-dimensional Markov-Switching Vector Error Correction (MS-VECM) model is also included.
 
 See the readme files of the subfolders for detailed instructions. See also this [blog post](https://www.kjartako.no/post/stan-code-for-markov-switching-vector-autoregressive-models/).
 
