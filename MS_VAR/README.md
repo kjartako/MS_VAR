@@ -1,6 +1,6 @@
 # Stan files
 
-There are two Stan files in this repository, the only difference being the covariance prior.
+There are two Stan files in this folder, the only difference being the covariance prior.
 If you are indifferent to this prior choice, the LKJ prior results in significantly lower runtime.
 Only the emphasized inputs are subject to user specification, for which the rest of the "inputs" are derived.  
 
@@ -31,7 +31,7 @@ Only the emphasized inputs are subject to user specification, for which the rest
 
 # Example files
 
-The repository includes two R-files that shows how the stan-files are used in practise:
+The folder includes two R-files that shows how the stan-files are used in practise:
 * **MS_VAR_example_sim**, a two-regime MS-VAR with 1 autoregressive lag, fitted to a simulated two-dimensional data. The regimes are applied to both the mean structure and the covariance structure.
 * **MS_VAR_example_USmacro**, a two-regime MS-VAR with 4 autoregressive lags, fitted to a three-dimensional quarterly US macro data set, consisting of inflation, unemployment and an interest rate. To avoid excessive parameterization, the regimes are only applied to the covariance structure. 
 
