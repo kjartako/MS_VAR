@@ -124,7 +124,7 @@ for (k in 1:(sigma_reg ? nreg : 1)){
 
 generated quantities {
 	matrix[dim,dim] sigma[sigma_reg ? nreg : 1];
-	int<lower=1,upper=2> S[T-ARdim];
+	int<lower=1,upper=nreg> S[T-ARdim];
 	real log_p_S;
   
 	for(i in 1:(sigma_reg ? nreg : 1)){
