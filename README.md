@@ -10,6 +10,8 @@ The code fits a Markov-switching vector autoregressive (MS-VAR) model to data in
 
 The code for a two-dimensional Markov-Switching Vector Error Correction (MS-VECM) model is also included.
 
+The MS folder includes a base Markov-switching model (without autoregressive lags).
+
 See the readme files of the subfolders for detailed instructions. See also this [blog post](https://www.kjartako.no/post/stan-code-for-markov-switching-vector-autoregressive-models/).
 
 The code assumes that the R-packages rstan and coda are installed (and rstudioapi if you are using Rstudio).
