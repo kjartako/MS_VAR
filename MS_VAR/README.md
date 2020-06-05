@@ -43,3 +43,7 @@ The prior distribution for the mean/covariance structures is equal for each regi
 When using more than one chain, the arbitrary labelling for each chain may not coincide.
 In the example files, unique labelling is introduces by ordering on the first element of the covariance matrices.
 This is achieved using the **labsw_2reg** file, which is only valid for nreg=2. 
+
+**Note that Stan may return warning messages indicating chains have not mixed.
+This is due to the label-switching.** 
+After unique labelling is applied to the Stan output, the chains should mix well.
