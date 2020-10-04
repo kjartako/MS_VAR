@@ -115,7 +115,7 @@ for (k in 1:(sigma_reg ? nreg : 1)){
 		
 		for(i in 1:nreg){
 		  for (j in 1:nreg){
-			fwd[i,j] = alphas[t-ARdim-1,i] + logQ[i,j] + py[j];
+			fwd[j,i] = alphas[t-ARdim-1,j] + logQ[j,i] + py[i];
 		}
 		  alphas[t-ARdim,i]=log_sum_exp(fwd[,i]);
 		}
